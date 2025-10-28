@@ -1,0 +1,30 @@
+.navbar-carlinker {
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link-carlinker {
+    position: relative;
+    padding-bottom: 5px !important;
+  }
+  
+  .nav-link-carlinker::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link-carlinker:hover::after {
+    width: 100%;
+  }
+  
+  @media (max-width: 991px) {
+    .nav-link-carlinker::after {
+      display: none;
+    }
+  }
+  
