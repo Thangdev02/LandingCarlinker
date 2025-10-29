@@ -15,6 +15,8 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./layouts/Header"
 import Footer from "./layouts/Footer"
+import WebPlatform from "./components/WebPlatform"
+import ProductOverview from "./components/ProductOverview"
 
 
 export default function Home() {
@@ -49,9 +51,13 @@ export default function Home() {
         <div id="services" className="reveal-bottom" style={{ marginTop: "18%" }}>
           <ServiceHighlight />
         </div>
-        {/* <div id="booking" className="reveal-left" style={{ marginTop: "18%" }}>
-          <BookingForm />
-        </div> */}
+         <div id="platform" className="reveal-bottom" style={{ marginTop: "18%" }}>
+          <WebPlatform />
+        </div>
+        <div id="product" className="reveal-bottom" style={{ marginTop: "18%" }}>
+          <ProductOverview />
+        </div>
+        
         <div id="reviews" className="reveal-bottom" style={{ marginTop: "18%" }}>
           <TestimonialScroll />
         </div>
