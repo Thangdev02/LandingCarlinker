@@ -8,8 +8,9 @@ const services = [
     title: "Bảo dưỡng định kỳ",
     icon: FaOilCan,
     description:
-      "Dịch vụ bảo dưỡng toàn diện giúp xe của bạn luôn hoạt động tốt nhất. Thay dầu, kiểm tra hệ thống và bảo trì định kỳ.",
+      "Dễ dàng đặt lịch bảo dưỡng tại các garage uy tín gần bạn. Carlinker giúp theo dõi tình trạng xe, nhắc lịch thay dầu, kiểm tra hệ thống và đảm bảo hiệu suất vận hành ổn định.",
     color: "#5B7FFF",
+    image: "/images/bao-duong.jpg",
   },
   {
     title: "Sửa chữa khẩn cấp",
@@ -17,6 +18,7 @@ const services = [
     description:
       "Đội thợ sửa chữa chuyên nghiệp sẵn sàng giải quyết các vấn đề khẩn cấp 24/7. Nhanh chóng, hiệu quả và đáng tin cậy.",
     color: "#9D4EDD",
+    image: "/images/sua-chua.jpg",
   },
   {
     title: "Thay pin & phụ tùng",
@@ -24,6 +26,7 @@ const services = [
     description:
       "Cung cấp pin, phụ tùng chính hãng với giá cạnh tranh. Lắp đặt chuyên nghiệp bởi các kỹ thuật viên có kinh nghiệm.",
     color: "#5B7FFF",
+    image: "/images/thay-pin.jpg",
   },
 ]
 
@@ -40,7 +43,7 @@ const ServiceHighlight = () => {
           WebkitTextFillColor: "transparent",
         }}
       >
-        Dịch vụ nổi bật ✨
+        Dịch vụ nổi bật 
       </h2>
       <hr
         style={{
@@ -50,11 +53,16 @@ const ServiceHighlight = () => {
         }}
       />
 
-      <Row className="g-4">
-        {services.map((service, index) => {
-          const IconComponent = service.icon
-          return (
-            <Col md={4} key={index}>
+      {services.map((service, index) => {
+        const IconComponent = service.icon
+        const isEven = index % 2 === 0
+        
+        return (
+          <Row 
+            key={index} 
+            className={`mb-5 align-items-center ${isEven ? '' : 'flex-row-reverse'}`}
+          >
+            <Col md={6}>
               <div
                 style={{
                   background: "linear-gradient(135deg, #BFD7ED, #BFD7ED)",
@@ -106,9 +114,52 @@ const ServiceHighlight = () => {
                 </p>
               </div>
             </Col>
-          )
-        })}
-      </Row>
+            <Col md={6}>
+              <div
+                style={{
+                  height: "300px",
+                  background: `linear-gradient(135deg, ${service.color}20, ${service.color}40)`,
+                  borderRadius: "16px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  overflow: "hidden",
+                }}
+              >
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundImage: `url(${service.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    borderRadius: "16px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "white",
+                    fontSize: "18px",
+                    fontWeight: "bold",
+                  }}
+                >
+              
+                  {!service.image && (
+                    <div
+                      style={{
+                        background: `linear-gradient(135deg, ${service.color}, ${service.color}80)`,
+                        padding: "20px",
+                        borderRadius: "8px",
+                      }}
+                    >
+                      Hình ảnh {service.title}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </Col>
+          </Row>
+        )
+      })}
     </Container>
   )
 }

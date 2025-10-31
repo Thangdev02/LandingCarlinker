@@ -20,12 +20,12 @@ const OriginStory = () => {
               overflow: "hidden",
               transition: "all 0.3s ease",
               width: "100%",
-              maxWidth: "480px", // ✅ rộng hơn
+              maxWidth: "480px", 
               height:'400px',
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              aspectRatio: "16 / 9", // ✅ chuyển sang tỉ lệ ngang
+              aspectRatio: "16 / 9", 
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = "0 12px 40px rgba(91, 127, 255, 0.2)"
@@ -45,7 +45,7 @@ const OriginStory = () => {
               style={{
                 width: "100%",
                 height: "100%",
-                objectFit: "cover", // ✅ để video lấp đầy khung
+                objectFit: "cover",
                 borderRadius: "16px",
               }}
             />

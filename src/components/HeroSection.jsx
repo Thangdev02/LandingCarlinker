@@ -2,7 +2,6 @@
 
 import { Container, Row, Col, Button } from "react-bootstrap"
 import { motion } from "framer-motion"
-
 const HeroSection = () => {
   const images = [
     "https://img.freepik.com/free-photo/car-being-taking-care-workshop_23-2149580532.jpg?semt=ais_hybrid&w=740&q=80",
@@ -16,7 +15,6 @@ const HeroSection = () => {
 
   return (
     <Container fluid className="text-center py-5">
-      {/* --- Title Section --- */}
       <Row className="justify-content-center align-items-center">
         <Col lg={10}>
           <h1
@@ -55,7 +53,6 @@ const HeroSection = () => {
             Từ cứu hộ, bảo dưỡng, đến showroom – tất cả đều trong một nền tảng duy nhất.
           </p>
 
-          {/* --- Buttons --- */}
           <div className="d-flex justify-content-center gap-3 flex-wrap mt-4">
             <Button
               style={{
@@ -76,6 +73,9 @@ const HeroSection = () => {
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "translateY(0)"
                 e.currentTarget.style.boxShadow = "0 4px 15px rgba(91, 127, 255, 0.3)"
+              }}
+              onClick={() => {
+                window.open("https://apps.apple.com/us/app/carlinker/id6753923353", "_blank")
               }}
             >
               Trải nghiệm ngay
@@ -102,7 +102,7 @@ const HeroSection = () => {
                 e.currentTarget.style.color = "#60A3D9"
               }}
               onClick={() => {
-                window.location.href = "https://carlinker-bf127.web.app/auth/login"
+                window.location.href = "https://quanly.carlinker.com.vn/"
               }}
             >
               Đăng ký đối tác Gara/Showroom
@@ -111,7 +111,6 @@ const HeroSection = () => {
         </Col>
       </Row>
 
-      {/* --- Image Section --- */}
       <Row className="justify-content-center mt-5">
         <Col lg={12}>
           <div

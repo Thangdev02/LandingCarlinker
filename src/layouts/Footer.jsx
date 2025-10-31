@@ -22,9 +22,7 @@ const Footer = () => {
       }}
     >
       <Container>
-        {/* Main Footer Content */}
         <Row className="mb-5">
-          {/* Company Info */}
           <Col lg={3} md={6} className="mb-4 mb-lg-0">
             <div className="d-flex align-items-center gap-2 mb-3">
              
@@ -36,7 +34,6 @@ const Footer = () => {
             </p>
           </Col>
 
-          {/* Services */}
           <Col lg={2} md={6} className="mb-4 mb-lg-0">
             <h6 className="fw-bold mb-3" style={{ fontSize: "16px" }}>
               Dịch vụ
@@ -85,7 +82,6 @@ const Footer = () => {
             </ul>
           </Col>
 
-          {/* Company */}
           <Col lg={2} md={6} className="mb-4 mb-lg-0">
             <h6 className="fw-bold mb-3" style={{ fontSize: "16px" }}>
               Công ty
@@ -134,7 +130,6 @@ const Footer = () => {
             </ul>
           </Col>
 
-          {/* Contact Info */}
           <Col lg={3} md={6}>
             <h6 className="fw-bold mb-3" style={{ fontSize: "16px" }}>
               Liên hệ
@@ -163,10 +158,8 @@ const Footer = () => {
           </Col>
         </Row>
 
-        {/* Divider */}
         <hr style={{ borderColor: "rgba(255, 255, 255, 0.2)", margin: "40px 0" }} />
 
-        {/* Bottom Footer */}
         <Row className="align-items-center">
           <Col md={6} className="mb-3 mb-md-0">
             <p style={{ fontSize: "14px", margin: 0, opacity: 0.9 }}>© 2025 CarLinker. Tất cả quyền được bảo lưu.</p>

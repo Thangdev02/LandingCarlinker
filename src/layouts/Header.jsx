@@ -18,7 +18,6 @@ const Header = () => {
       }}
     >
       <Container>
-        {/* Logo */}
         <Navbar.Brand
           href="/"
           className="fw-bold fs-2 text-white d-flex align-items-center gap-2"
@@ -33,17 +32,16 @@ const Header = () => {
             src="./logonew.png"
             alt="CarLinker Logo"
             style={{
-              width: "68px",
+              width: "100%",
               height: "58px",
               objectFit: "fill",
               marginRight: "8px",
             }}
           />
-          CarLinker
+       
         </Navbar.Brand>
 
 
-        {/* Toggle Button */}
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           onClick={() => setExpanded(!expanded)}
@@ -52,7 +50,6 @@ const Header = () => {
           {expanded ? <FaTimes size={24} /> : <FaBars size={24} />}
         </Navbar.Toggle>
 
-        {/* Navigation Menu */}
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
           <Nav className="ms-auto fw-semibold gap-3" style={{ fontFamily: "Fredoka, sans-serif", fontSize: "16px" }}>
 
@@ -81,7 +78,6 @@ const Header = () => {
             </Nav.Link>
           </Nav>
 
-          {/* CTA Buttons */}
           <div className="d-flex gap-2 ms-3 mt-3 mt-lg-0">
             <Button
               className="px-4 py-2 rounded-3 fw-semibold "
@@ -102,7 +98,11 @@ const Header = () => {
                 e.target.style.transform = "translateY(0)"
                 e.target.style.boxShadow = "0 4px 12px rgba(255, 255, 255, 0.3)"
               }}
+              onClick={() => {
+                window.open("https://apps.apple.com/us/app/carlinker/id6753923353", "_blank")
+              }}
             >
+              
               Tải Ngay
             </Button>
           </div>

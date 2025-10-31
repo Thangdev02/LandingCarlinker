@@ -127,8 +127,6 @@ const PricingPlans = () => {
           </div>
         </Col>
 
-        {/* Business Plan */}
-                {/* Premium Plan */}
 
       </Row>
     </Container>

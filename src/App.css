@@ -144,12 +144,10 @@ h6 {
   font-family: "Fredoka", sans-serif;
 }
 
-/* Smooth transitions */
 * {
   transition: all 0.3s ease;
 }
 
-/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -169,7 +167,6 @@ h6 {
   background: linear-gradient(to bottom, #4a6fe8, #8c3dd0);
 }
 
-/* Button animations */
 button {
   position: relative;
   overflow: hidden;
@@ -190,7 +187,6 @@ button:hover::before {
   left: 100%;
 }
 
-/* Form inputs */
 input,
 select,
 textarea {
@@ -204,7 +200,6 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(91, 127, 255, 0.1) !important;
 }
 
-/* Gradient text */
 .gradient-text {
   background: linear-gradient(to right, #5b7fff, #9d4edd);
   -webkit-background-clip: text;
@@ -212,7 +207,6 @@ textarea:focus {
   background-clip: text;
 }
 
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -258,7 +252,6 @@ textarea:focus {
   animation: slideInRight 0.6s ease-out;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   h1 {
     font-size: 36px !important;
